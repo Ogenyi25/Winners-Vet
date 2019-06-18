@@ -247,9 +247,44 @@
               </p>
             </div>
           </div>
-
         </div>
 
+
+        <script>
+          var myVideo = document.getElementById("video1");
+
+          function playPause(video1, video2, video3) {
+            let myVideo = video1 === '1' ?
+              document.getElementById("video2") :
+              document.getElementById("video3");
+            if (myVideo.paused)
+              myVideo.play();
+            else
+              myVideo.pause();
+          }
+
+          function makeBig() {
+            myVideo.width = 560;
+          }
+          function makeSmall() {
+            myVideo.width = 320;
+          }
+          function makeNormal() {
+            myVideo.width = 400;
+          }
+        </script>
+
+        <header class="section-header">
+          <h3>Video Gallery</h3>
+          <div style="text-align: center">
+            <button onclick="playPause()">Play/Pause</button>
+            <br>
+            <video id="video3" width="700" height="550">
+              <source src="./videos/vid6.mp4" type="video/mp4">
+              your browser does not support this video tag
+            </video>
+          </div>
+        </header>
       </div>
     </section><!-- #about -->
 
@@ -314,7 +349,7 @@
         <h3>Call To Action</h3>
         <p> GELDconcept is committed to embrace customers satisfaction as part of the solution to address the
           changes and challenges of Staging an event. </p>
-        
+
       </div>
     </section><!-- #call-to-action -->
 
@@ -413,7 +448,7 @@
       <div class="container">
 
         <header class="section-header">
-          <h3 class="section-title">Event Photos</h3>
+          <h3 class="section-title">Photo Gallary</h3>
         </header>
 
         <div class="row">
@@ -444,7 +479,6 @@
               </div>
             </div>
           </div>
-
           <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
@@ -544,24 +578,8 @@
           <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
             <div class="portfolio-wrap">
               <figure>
-                <img src="img/portfolio/outdoor3.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/outdoor3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3"
-                  title="Preview"><i class="ion ion-eye"></i></a>
-                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
-              </figure>
-
-              <div class="portfolio-info">
-                <h4><a href="#">Outdoor</a></h4>
-                <p>Event</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
-            <div class="portfolio-wrap">
-              <figure>
-                <img src="img/portfolio/lightings3.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/lightings3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1"
+                <img src="img/portfolio/lightings2.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/lightings2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3"
                   title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
@@ -569,6 +587,22 @@
               <div class="portfolio-info">
                 <h4><a href="#">Lightings</a></h4>
                 <p>Photos</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+            <div class="portfolio-wrap">
+              <figure>
+                <img src="img/portfolio/outdoor3.jpg" class="img-fluid" alt="">
+                <a href="img/portfolio/outdoor3.jpg" class="link-preview" data-lightbox="portfolio" data-title="Web 1"
+                  title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
+              </figure>
+
+              <div class="portfolio-info">
+                <h4><a href="#">Outdoors</a></h4>
+                <p>Events</p>
               </div>
             </div>
           </div>
@@ -616,7 +650,7 @@
             <h4>Manager</h4>
             <p>
               <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
-              
+
               <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
             </p>
           </div>
@@ -664,16 +698,13 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp">
             <div class="member">
-              <img src="img/team-1.jpg" class="img-fluid" alt="">
+              <img src="img/team-1.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Joseph Lebo Nkanu</h4>
                   <span>CEO</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-google-plus"></i></a>
-                    <a href=""><i class="fa fa-linkedin"></i></a>
+                    <a href="www.facebook.com/Joseph.lebo1"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -682,15 +713,13 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
             <div class="member">
-              <img src="img/team-2.jpg" class="img-fluid" alt="">
+              <img src="img/team-2.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Miss. Alor Victoria</h4>
                   <span>Manager</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
                     <a href="www.facebook.com/victoria.daniel.12914"><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
                   </div>
                 </div>
               </div>
@@ -699,13 +728,12 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
             <div class="member">
-              <img src="img/team-3.jpg" class="img-fluid" alt="">
+              <img src="img/team-3.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>John Otor</h4>
                   <span>Web Consultant</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
                     <a href="www.facebook.com/john.otor3"><i class="fa fa-facebook"></i></a>
                     <a href="www.instagram.com/ogenyi21"><i class="fa fa-instagram"></i></a>
                   </div>
@@ -716,15 +744,13 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team-4.jpg" class="img-fluid" alt="">
+              <img src="img/team-4.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Victor Okoliko</h4>
                   <span>Staff</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href="www.facebook.com/victor.Okoliko.9"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -733,15 +759,14 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team-5.jpg" class="img-fluid" alt="">
+              <img src="img/team-5.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Lebo Emmanuel</h4>
-                  <span>Staff</span>
+                  <span>General Secretary</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href="www.facebook.com/emmzchords"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -750,15 +775,14 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team-6.jpg" class="img-fluid" alt="">
+              <img src="img/team-6.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>David Sunday</h4>
                   <span>Staff</span>
                   <div class="social">
                     <a href=""><i class="fa fa-twitter"></i></a>
-                    <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href="www.facebook.com/Davidialer"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -767,15 +791,43 @@
 
           <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="member">
-              <img src="img/team-7.jpg" class="img-fluid" alt="">
+              <img src="img/team-7.jpg" class="img-fluid pic" alt="">
               <div class="member-info">
                 <div class="member-info-content">
                   <h4>Kingsley John</h4>
                   <span>Staff</span>
                   <div class="social">
-                    <a href=""><i class="fa fa-twitter"></i></a>
                     <a href=""><i class="fa fa-facebook"></i></a>
-                    <a href=""><i class="fa fa-instagram"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/team-8.jpg" class="img-fluid pic" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Funke</h4>
+                  <span>Staff</span>
+                  <div class="social">
+                    <a href=""><i class="fa fa-facebook"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="member">
+              <img src="img/team-9.jpg" class="img-fluid pic" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Godwin Emmanuel</h4>
+                  <span>Marketing Manager</span>
+                  <div class="social">
+                    <a href="www.facebook.com/Godwin1822"><i class="fa fa-facebook"></i></a>
                   </div>
                 </div>
               </div>
@@ -812,7 +864,10 @@
             <div class="contact-phone">
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
-              <p><a href="tel:+234(0)8134756623">+234(0)8134756623</a></p>
+              <p><a href="tel:+234(0)8132806889">+234(0)8132806889</a>
+              <a href="tel:+234(0)8098989133">+234(0)8098989133</a>
+              <a href="tel:+234(0)8105471171">+234(0)8105471171</a>
+              </p>
             </div>
           </div>
 
@@ -820,7 +875,7 @@
             <div class="contact-email">
               <i class="ion-ios-email-outline"></i>
               <h3>Email</h3>
-              <p><a href="mailto:johnogenyi4real@gmail.com">johnogenyi4real@gmail.com</a></p>
+              <p><a href="mailto:goldenjoepraise@gmail.com">goldenjoepraise@gmail.com</a></p>
             </div>
           </div>
 
@@ -882,9 +937,9 @@
             <h4>Useful Links</h4>
             <ul>
               <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
-              <li><i class="ion-ios-arrow-right"></i> <a href="#">Portfolio</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#services">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#portfolio">Portfolio</a></li>
 
             </ul>
           </div>
@@ -895,14 +950,12 @@
               GoldenEventLighteningAndDecoration, <br>
               Gwagwalada,<br>
               Abuja <br>
-              <strong>Phone:</strong> +234(0)8134756623<br>
-              <strong>Email:</strong> johnogenyi4real@gmail.com<br>
+              <strong>Phone:</strong> +234(0)8132806889, +234(0)8098989133, +234(0)8105471171<br>
+              <strong>Email:</strong> goldenjoepraise@gmail.com<br>
             </p>
 
             <div class="social-links">
-              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="www.facebook.com/Joseph.lebo1" class="facebook"><i class="fa fa-facebook"></i></a>
             </div>
 
           </div>
