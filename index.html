@@ -254,10 +254,12 @@
           var myVideo = document.getElementById("video1");
 
           function playPause(videoNum) {
-            let myVideo = video1 === '1' ?
-              document.getElementById("video1"):
-              document.getElementById("video2")
-              document.getElementById("video3");
+            console.log(videoNum)
+            let myVideo = videoNum === '1' ?
+              document.getElementById("video1") :
+              videoNum === '2' ?
+                document.getElementById("video2") :
+                document.getElementById("video3");
             if (myVideo.paused)
               myVideo.play();
             else
@@ -269,16 +271,16 @@
         <header class="section-header">
           <h3>Video Gallery</h3>
           <div style="text-align: center">
-            
-            <video onclick="playPause()" id="video3" width="80%" height="550">
+
+            <video onclick="playPause('3')" id="video3" width="80%" height="550">
               <source src="./videos/vid6.mp4" type="video/mp4">
               your browser does not support this video tag
             </video>
-            <video onclick="playPause()" id="video2" width="80%" height="550">
+            <video onclick="playPause('2')" id="video2" width="80%" height="550">
               <source src="./videos/vid5.mp4" type="video/mp4">
               your browser does not support this video tag
             </video>
-            <video onclick="playPause()" id="video1" width="80%" height="550">
+            <video onclick="playPause('1')" id="video1" width="80%" height="550">
               <source src="./videos/vid1.mp4" type="video/mp4">
               your browser does not support this video tag
             </video>
@@ -578,8 +580,8 @@
             <div class="portfolio-wrap">
               <figure>
                 <img src="img/portfolio/lightings2.jpg" class="img-fluid" alt="">
-                <a href="img/portfolio/lightings2.jpg" class="link-preview" data-lightbox="portfolio" data-title="Card 3"
-                  title="Preview"><i class="ion ion-eye"></i></a>
+                <a href="img/portfolio/lightings2.jpg" class="link-preview" data-lightbox="portfolio"
+                  data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
                 <a href="#" class="link-details" title="More Details"><i class="ion ion-android-open"></i></a>
               </figure>
 
@@ -864,8 +866,8 @@
               <i class="ion-ios-telephone-outline"></i>
               <h3>Phone Number</h3>
               <p><a href="tel:+234(0)8132806889">+234(0)8132806889</a>
-              <a href="tel:+234(0)8098989133">+234(0)8098989133</a>
-              <a href="tel:+234(0)8105471171">+234(0)8105471171</a>
+                <a href="tel:+234(0)8098989133">+234(0)8098989133</a>
+                <a href="tel:+234(0)8105471171">+234(0)8105471171</a>
               </p>
             </div>
           </div>
