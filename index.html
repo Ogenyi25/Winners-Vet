@@ -253,9 +253,10 @@
         <script>
           var myVideo = document.getElementById("video1");
 
-          function playPause(video1, video2, video3) {
+          function playPause(videoNum) {
             let myVideo = video1 === '1' ?
-              document.getElementById("video2") :
+              document.getElementById("video1"):
+              document.getElementById("video2")
               document.getElementById("video3");
             if (myVideo.paused)
               myVideo.play();
@@ -271,6 +272,14 @@
             
             <video onclick="playPause()" id="video3" width="80%" height="550">
               <source src="./videos/vid6.mp4" type="video/mp4">
+              your browser does not support this video tag
+            </video>
+            <video onclick="playPause()" id="video2" width="80%" height="550">
+              <source src="./videos/vid5.mp4" type="video/mp4">
+              your browser does not support this video tag
+            </video>
+            <video onclick="playPause()" id="video1" width="80%" height="550">
+              <source src="./videos/vid1.mp4" type="video/mp4">
               your browser does not support this video tag
             </video>
           </div>
